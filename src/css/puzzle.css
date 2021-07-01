@@ -1,0 +1,32 @@
+@font-face {
+    font-family:"kenvector future";
+    src: url('../resources/kenvector_future.ttf');
+}
+
+
+.button {
+   
+   -fx-font-family: "kenvector future";
+   -fx-background: transparent;
+   -fx-background-image: url('../resources/red_button.png');
+    
+   
+   
+
+}
+
+.button:pressed{
+	-fx-font-family: "kenvector future";
+	-fx-background-color: transparent; 
+	-fx-background-image: url('../resources/yellow_button_pressed.png');
+	-fx-pref-height: 45;
+	-fx-translate-y : +4;
+	
+}
+
+.button:released{
+ -fx-translate-y : -4;
+}
+#puzzle_title1,#puzzle_title2,#error_msg{
+	-fx-font-family: "kenvector future";
+}

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane stylesheets="@../css/Home.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeController">
+   <children>
+      <Pane fx:id="home_pane" layoutX="35.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <ImageView fitHeight="423.0" fitWidth="648.0" layoutX="-35.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/HashiHome.jpg" />
+               </image>
+            </ImageView>
+            <Text fx:id="hashi_title1" fill="WHITE" layoutX="129.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hashi Puzzle " wrappingWidth="361.4921875">
+               <font>
+                  <Font size="38.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="244.75" radius="119.31" spread="0.83" width="234.49" />
+               </effect>
+            </Text>
+            <Text fx:id="hashi_title2" fill="WHITE" layoutX="194.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Solver">
+               <font>
+                  <Font size="38.0" />
+               </font>
+               <effect>
+                  <DropShadow height="244.75" radius="119.31" spread="0.83" width="234.49" />
+               </effect>
+            </Text>                       
+            <Button fx:id="home_custom_btn" layoutX="194.0" layoutY="234.0" mnemonicParsing="false" onMouseClicked="#setRandFalse" prefHeight="49" prefWidth="190.0" text="Custom puzzle" />
+            <Button fx:id="home_random_btn" layoutX="194.0" layoutY="318.0" mnemonicParsing="false" onMouseClicked="#SetRandTrue" prefHeight="49" prefWidth="190.0" text="Random puzzle" />
+            <Pane fx:id="custom_menu" layoutX="83.0" layoutY="-433.0" prefHeight="422.0" prefWidth="434.0">
+               <children>
+                  <ImageView fx:id="custom_menu_img" fitHeight="422.0" fitWidth="578.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                      <Image url="@../resources/red_panel.png" />
+                    </image>
+                  </ImageView>
+                  <Text fx:id="menu_title1" fill="WHITE" layoutX="87.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Puzzle" wrappingWidth="258.4921875">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="menu_title2" fill="WHITE" layoutX="109.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Parameters" wrappingWidth="215.4921875">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="menu_cancel_btn" layoutX="122.0" layoutY="346.0" mnemonicParsing="false" onMouseClicked="#setRandFalse" prefHeight="49.0" prefWidth="190.0" text="CANCEL" />
+                  <Button fx:id="menu_confirm_btn" layoutX="122.0" layoutY="286.0" mnemonicParsing="false" onMouseClicked="#loadCustomPuzzle" prefHeight="49" prefWidth="190.0" text="CONFIRM" />
+                  <Slider fx:id="lignes_slider" layoutX="110.0" layoutY="145.0" majorTickUnit="1.0" max="20.0" min="4.0" minorTickCount="0" prefHeight="14.0" prefWidth="215.0" showTickMarks="true" snapToTicks="true" value="1.0" />
+                  <Slider fx:id="columns_slider" layoutX="110.0" layoutY="184.0" majorTickUnit="1.0" max="20.0" min="4.0" minorTickCount="0" prefHeight="14.0" prefWidth="215.0" showTickMarks="true" snapToTicks="true" />
+                  <Slider fx:id="islands_slider" layoutX="110.0" layoutY="221.0" majorTickUnit="1.0" max="20.0" min="2.0" minorTickCount="0" prefHeight="14.0" prefWidth="215.0" showTickMarks="true" snapToTicks="true" />
+                  <Text fx:id="menu_lignes_title" fill="WHITE" layoutX="30.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lignes" />
+                  <Text fx:id="menu_columns_title" fill="WHITE" layoutX="30.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="columns" />
+                  <Text fx:id="menu_islands_title" fill="WHITE" layoutX="30.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Islands" />
+                  <TextField fx:id="lignes_field" layoutX="338.0" layoutY="141.0" prefHeight="22.0" prefWidth="31.0" />
+                  <TextField fx:id="columns_field" editable="false" layoutX="338.0" layoutY="182.0" prefHeight="22.0" prefWidth="31.0" />
+                  <TextField fx:id="islands_fields" editable="false" layoutX="338.0" layoutY="219.0" prefHeight="22.0" prefWidth="31.0" />  
+               </children>
+            </Pane>
+              
+            
+         </children>
+      </Pane>
+   </children>
+
+   
+</AnchorPane>

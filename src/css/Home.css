@@ -1,0 +1,41 @@
+@font-face {
+    font-family:"kenvector future";
+    src: url('../resources/kenvector_future.ttf');
+}
+
+
+.button {
+   
+   -fx-font-family: "kenvector future";
+   -fx-background: transparent;
+   -fx-background-image: url('../resources/red_button.png');
+    
+   
+   
+
+}
+
+.button:pressed{
+	-fx-font-family: "kenvector future";
+	-fx-background-color: transparent; 
+	-fx-background-image: url('../resources/yellow_button_pressed.png');
+	-fx-pref-height: 45;
+	-fx-translate-y : +4;
+	
+}
+
+.button:released{
+ -fx-translate-y : -4;
+}
+#hashi_title1,#hashi_title2,#menu_title1,#menu_title2,#menu_lignes_title,#menu_columns_title,#menu_islands_title{
+	-fx-font-family: "kenvector future";
+}
+
+#lignes_field,#columns_field,#islands_fields{
+	-fx-font-family: "regular";
+}
+
+#custom_menu{
+
+}
+
